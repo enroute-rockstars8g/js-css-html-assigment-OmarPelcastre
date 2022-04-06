@@ -22,23 +22,30 @@
             </div>
         </div>
 
-        <div class="fibo">
-            <div>
-                <h4>Introduce un número para calcular la sucesión fibonacci</h4>
-                <input type="number" id="fiboNumber">
-                <button id="fiboButton" onclick="calcularFibo()">Calcular</button>
-            </div>
-
-            <div>
-                <canvas width="1000" height="1000" id="mipanel"></canvas>
-            </div>
-        </div>
-
         <div class="factorial">
             <h4>Introduce un número para calcular su factorial</h4>
             <input type="number" id="facNumber">
-            <button onclick="calcularFactorial()">Calcular</button>
+            <button class="btn" onclick="calcularFactorial()" id="factButton">Calcular</button>
+            <h5 id="resultadoFact"></h5>
         </div>
+
+        <div class="fibo">
+            <div>
+                <h4>Introduce un número para calcular la sucesión fibonacci</h4>
+                <input type="number" id="fiboNumber" max="10">
+                <button id="fiboButton" class="btn" onclick="calcularFibo()">Calcular</button>
+                <h5 id="resultadoFibo"></h5>
+            </div>
+
+            <div>
+                <canvas width="500" height="500" id="mipanel"></canvas>
+            </div>
+        </div>
+
+        <small>Nota 1: Si prueba calculando los números fibonacci desde el 10 para abajo podrá ver un pequeño efecto</small>
+        <br>
+        <small>Nota 2: Intenté dibujar la razón pero ya no medio tiempo</small>
+
         <script src="index.js"></script>
     </body>
 </html>

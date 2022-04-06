@@ -1,8 +1,13 @@
 var inputFibo = document.getElementById("fiboNumber")
-
 inputFibo.addEventListener('keydown', function (e) {
     if (e.key === 'Enter') {
         calcularFibo();
+    }
+})
+var inputFact = document.getElementById("facNumber")
+inputFact.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        calcularFactorial();
     }
 })
 
@@ -10,8 +15,8 @@ var array = [1];
 function calcularFibo() {
     const fiboNumber = parseInt(document.getElementById("fiboNumber").value);
     console.log(fiboNumber)
-    let num1 = 0;
-    let num2 = 1;
+    var num1 = 0;
+    var num2 = 1;
     if (fiboNumber == 1 || fiboNumber == 2) {
         if (fiboNumber == 1) {
             num2 = 0
@@ -26,7 +31,8 @@ function calcularFibo() {
             array.push(num2)
         }
     }
-
+    
+    var fiboResult = document.getElementById("resultadoFibo").innerHTML = "El resultado es: " + num2
     drawFibo(num2)
 }
 
@@ -44,8 +50,8 @@ function drawFibo(result) {
     console.log(array)
     var miLienzo = document.getElementById("mipanel");
     var lapiz = miLienzo.getContext("2d");
-    let x = 150
-    let y = 150
+    let x = 10
+    let y = 10
     for (arrayValue = 2; arrayValue < array.length; arrayValue++) {
         let value = array[arrayValue];
         let yAux = y
@@ -69,12 +75,14 @@ function calcularFactorial() {
     const facNumber = parseInt(document.getElementById("facNumber").value);
 
     console.log(facNumber);
-    let result = 1;
+    var result = 1;
     for (i = 2; i <= facNumber; i++) {
         result *= i
     }
 
     console.log(result);
+    var fiboResult = document.getElementById("resultadoFact").innerHTML = "El resultado es: " + result
+
 
 }
 
