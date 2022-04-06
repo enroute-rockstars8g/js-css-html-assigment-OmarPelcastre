@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="description" content="Este es el sitio de los rockstars">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="bio">
+            <h2>Este soy yo</h2>
+            <p>Mi biográfia</p>
+        </div>
+
+        <div class="fibo">
+            <div>
+                <h4>Introduce un número para calcular la sucesión fibonacci</h4>
+                <input type="number" id="fiboNumber">
+                <button id="fiboButton" onclick="calcularFibo()">Calcular</button>
+            </div>
+
+            <div>
+                <canvas width="1000" height="1000" id="mipanel"></canvas>
+            </div>
+        </div>
+
+        <div class="factorial">
+            <h4>Introduce un número para calcular su factorial</h4>
+            <input type="number" id="facNumber">
+            <button onclick="calcularFactorial()">Calcular</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
